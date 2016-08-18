@@ -1,0 +1,111 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.grid-cell {
+  flex: 1;
+}
+
+/* Base classes for all media */
+.grid--fit > .grid-cell {
+  flex: 1;
+}
+.grid--full > .grid-cell {
+  flex: 0 0 100%;
+}
+.grid--1of2 > .grid-cell {
+  flex: 0 0 50%
+}
+.grid--1of3 > .grid-cell {
+  flex: 0 0 33.3333%
+}
+.grid--1of4 > .grid-cell {
+  flex: 0 0 25%
+}
+
+/* Small to medium screens */
+@media (min-width: 24em) {
+  .small-grid--fit > .grid-cell {
+    flex: 1;
+  }
+  .small-grid--full > .grid-cell {
+    flex: 0 0 100%;
+  }
+  .small-grid--1of2 > .grid-cell {
+    flex: 0 0 50%
+  }
+  .small-grid--1of3 > .grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .small-grid--1of4 > .grid-cell {
+    flex: 0 0 25%
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .large-grid--fit > .grid-cell {
+    flex: 1;
+  }
+  .large-grid--full > .grid-cell {
+    flex: 0 0 100%;
+  }
+  .large-grid--1of2 > .grid-cell {
+    flex: 0 0 50%
+  }
+  .large-grid--1of3 > .grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .large-grid--1of4 > .grid-cell {
+    flex: 0 0 25%
+  }
+}
+
+
+/* Badger Styles */
+
+body {
+  background: url('../images/dark_mosaic_@2X.png');
+  background-size: 300px 295px;
+  color: #244545;
+  font-family: 'Coda', cursive; }
+
+a {
+  color: #478888;
+  opacity: 0.8;
+  transition: opacity 0.3s linear;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+header {
+  border-bottom: 2px solid rgba(36,69,69, 0.6);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-cell > img {
+  height: 160px;
+  width: 160px;
+}
+
+.grid-cell {
+  box-shadow: 0 0 0 3px rgba(36,69,69, 0.6);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-cell:hover {
+  background: url('../images/dark_mosaic_@2X.png');
+  background-size: 300px 295px;
+  box-shadow: 0 0 0 3px rgba(36,69,69, 0.8);
+  transform: scale(1.05);
+}
